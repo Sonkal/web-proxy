@@ -9,6 +9,11 @@ docker run \
   -d \
   sonkal/web-proxy
 
+#  -it \
+#  --rm \
+#  sonkal/web-proxy \
+#  bash
+
 # docker run \
 #  --network mongo-net \
 #  -e "NODE_ENV=production" \

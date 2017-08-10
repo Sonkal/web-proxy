@@ -1,0 +1,17 @@
+mymongo:
+    image: mongo
+    ports:
+        - "27017:27017"
+
+application-service:
+    build: ../application-service
+    ports:
+        - "8080:3000"
+    links:
+      - mymongo
+nginx:
+    build: ./
+    ports:
+        - "80:80"
+    links:
+      - application-service
